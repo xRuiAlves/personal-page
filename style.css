@@ -1,0 +1,135 @@
+body {
+    background-image: url("background.jpg");
+    font-family: monospace;
+}
+
+#card {
+    background-color: white;
+    width: 600px;
+    padding: 2em;
+    border-radius: 0.5em;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+
+    -webkit-box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.75);
+}
+
+#card header {
+    display: flex;
+    margin-bottom: 1.5em;
+}
+
+#card header img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+#card header p {
+    margin: 0;
+}
+
+#card header .description {
+    margin-left: 2.5em;
+}
+
+#card header .name {
+    font-size: 4em;
+    margin-bottom: 0.15em;
+}
+
+#card header .title {
+    font-size: 2em
+}
+
+#card .bio {
+    font-size: 1.25em;
+    margin-bottom: 2em;
+}
+
+#card .refs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    grid-column-gap: 2em;
+}
+
+#card .refs a.button {
+    font-size: 1.65em;
+    background-color: #8c6434;
+    display: inline-block;
+    padding: 0.35em 1em;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 0.25s;
+    text-decoration: none;
+}
+
+#card .refs .button:hover {
+    background-color: #51351c;
+}
+
+@media screen and (max-width: 800px) {
+    #card {
+        width: 525px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .image-container {
+        margin-bottom: 2em;
+    }
+
+    #card {
+        width: 80%;
+        padding: 2em;
+    
+        position: static;
+        margin: 0 auto;
+        margin-top: 3.5em;
+        margin-bottom: 3.5em;
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+    
+    #card header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #card header .name {
+        font-size: 3.25em;
+        margin-bottom: 0.15em;
+    }
+
+    #card header .title {
+        font-size: 1.5em;
+    }
+
+    #card header .description {
+        margin-left: 0
+    }
+
+    #card .refs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        grid-column-gap: 2em;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #card .refs .button {
+        font-size: 1.5em;
+    }
+}
