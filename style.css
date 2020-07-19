@@ -129,7 +129,7 @@ body {
 }
 
 @media screen and (max-width: 350px) {
-    #card .refs .button {
+    #card .refs a.button {
         font-size: 1.5em;
     }
 }
