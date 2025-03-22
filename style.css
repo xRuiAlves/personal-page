@@ -5,10 +5,10 @@ body {
 
 #card {
     background-color: white;
-    width: 600px;
+    width: 700px;
     padding: 2em;
     border-radius: 0.5em;
-    
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,8 +27,8 @@ body {
 }
 
 #card header img {
-    width: 150px;
-    border-radius: 50%;
+    border-radius: 10px;
+    width: 280px;
 }
 
 #card header p {
@@ -36,21 +36,27 @@ body {
 }
 
 #card header .description {
-    margin-left: 2.5em;
+    margin-left: 2em;
+    font-size: 1rem;
+}
+
+#card header .description .entry {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#card header .description .bio {
+    margin-top: 2rem;
 }
 
 #card header .name {
-    font-size: 4em;
+    font-size: 3.3rem;
     margin-bottom: 0.15em;
 }
 
 #card header .title {
     font-size: 2em
-}
-
-#card .bio {
-    font-size: 1.25em;
-    margin-bottom: 2em;
 }
 
 #card .refs {
@@ -78,13 +84,7 @@ body {
     background-color: #51351c;
 }
 
-@media screen and (max-width: 800px) {
-    #card {
-        width: 525px;
-    }
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .image-container {
         margin-bottom: 2em;
     }
@@ -92,7 +92,7 @@ body {
     #card {
         width: 80%;
         padding: 2em;
-    
+
         position: static;
         margin: 0 auto;
         margin-top: 3.5em;
@@ -101,7 +101,7 @@ body {
         -webkit-transform: none;
         transform: none;
     }
-    
+
     #card header {
         flex-direction: column;
         align-items: center;
@@ -120,6 +120,10 @@ body {
         margin-left: 0
     }
 
+    #card header .description .bio {
+        margin-bottom: 1rem;
+    }
+
     #card .refs {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -131,5 +135,11 @@ body {
 @media screen and (max-width: 350px) {
     #card .refs a.button {
         font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #card header img {
+        width: 100%;
     }
 }
