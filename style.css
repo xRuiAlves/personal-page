@@ -241,7 +241,7 @@ body {
     body {
         display: block;
         padding: 0;
-        background: var(--surface);
+        background: var(--bg);
     }
 
     .card {
@@ -252,6 +252,7 @@ body {
         min-height: 100dvh;
         max-width: none;
         padding: 0 0 24px;
+        background-color: transparent;
         border: 0;
         border-radius: 0;
         box-shadow: none;
@@ -264,15 +265,15 @@ body {
         aspect-ratio: auto;
         border-radius: 0;
         object-position: 30% 35%;
+        -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
+        mask-image: linear-gradient(to bottom, #000 70%, transparent);
     }
 
     .content {
         position: relative;
         flex-shrink: 0;
-        margin-top: -28px;
-        padding: 28px 24px 0;
-        background-color: var(--surface);
-        border-radius: 28px 28px 0 0;
+        margin-top: -16px;
+        padding: 0 24px;
     }
 
     .name {
@@ -314,7 +315,7 @@ body {
     }
 
     .content {
-        padding: 22px 20px 0;
+        padding: 0 20px;
     }
 
     .name {
