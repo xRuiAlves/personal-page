@@ -149,11 +149,19 @@ body::before {
     transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
 }
 
-.links a:hover {
+.links a:active {
     background-color: var(--accent);
     border-color: var(--accent);
     color: var(--on-accent);
-    transform: translateY(-2px);
+}
+
+@media (hover: hover) {
+    .links a:hover {
+        background-color: var(--accent);
+        border-color: var(--accent);
+        color: var(--on-accent);
+        transform: translateY(-2px);
+    }
 }
 
 .links a:focus-visible {
