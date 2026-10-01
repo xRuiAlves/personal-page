@@ -152,3 +152,18 @@ body::before {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
 }
+
+.icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.facts .icon {
+    color: var(--accent);
+}
