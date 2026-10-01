@@ -97,7 +97,7 @@ body {
 
 .facts {
     display: grid;
-    gap: 8px;
+    gap: 11px;
     margin: 20px 0 0;
     padding: 0;
     list-style: none;
@@ -281,7 +281,7 @@ body {
     }
 
     .facts {
-        gap: 6px;
+        gap: 9px;
         margin-top: 14px;
         font-size: 1rem;
     }
@@ -355,7 +355,7 @@ body {
     }
 
     .facts {
-        gap: 4px;
+        gap: 6px;
         margin-top: 12px;
         font-size: 0.9375rem;
     }
