@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
     <link rel="stylesheet" href="style.css">
     <title>Rui Alves</title>
 </head>
 <body>
-    <div id="card">
-        <header>
-            <div class="image-container">
-                <img src="foto.jpg" />
-            </div>
-            <div class="description">
-                <p class="name">Rui Alves</p>
-                <p class="entry">💼 Staff Platform Engineer @ Kevel</p>
-                <p class="entry">🇵🇹 Porto, Portugal</p>
-                <p class="bio">
-                    Software development and architecture enthusiast.
-                    Keen on Cloud Computing and automating things.
-                    Passionate about teaching and learning new things.
-                </p>
-            </div>
-        </header>
-        <div class="refs">
-            <a class="button" href="https://github.com/xRuiAlves">GitHub</a>
-            <a class="button" href="https://www.linkedin.com/in/rui-pedro-alves/">LinkedIn</a>
-            <a class="button" href="https://drive.google.com/file/d/1AoIJ_Zp8Y2vXV8Tvxjxt-cpAD7Q-SVnp/view?usp=sharing">Résumé</a>
-            <a class="button" href="https://blog.ruialves.net">Blog</a>
+    <main class="card">
+        <img class="photo" src="foto.jpg" alt="Portrait of Rui Alves">
+        <div class="content">
+            <p class="prompt" aria-hidden="true">$ whoami</p>
+            <h1 class="name">Rui Alves</h1>
+            <ul class="facts">
+                <li>Staff Platform Engineer @ Kevel</li>
+                <li>Porto, Portugal</li>
+            </ul>
+            <p class="bio">
+                Software development and architecture enthusiast.
+                Keen on Cloud Computing and automating things.
+                Passionate about teaching and learning new things.
+            </p>
         </div>
-    </div>
+        <nav class="links">
+            <a href="https://github.com/xRuiAlves">GitHub</a>
+            <a href="https://www.linkedin.com/in/rui-pedro-alves/">LinkedIn</a>
+            <a href="https://drive.google.com/file/d/1AoIJ_Zp8Y2vXV8Tvxjxt-cpAD7Q-SVnp/view?usp=sharing">Résumé</a>
+            <a href="https://blog.ruialves.net">Blog</a>
+        </nav>
+    </main>
 </body>
 </html>
