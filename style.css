@@ -1,37 +1,15 @@
 :root {
-    --bg: #f5f2ec;
-    --dot: #d6cdbf;
-    --glow: rgba(31, 78, 140, 0.10);
-    --bg-image: radial-gradient(60rem 40rem at 50% 45%, var(--glow), transparent 70%);
-    --surface: #ffffff;
-    --surface-2: #f7f3ed;
-    --border: #e8e1d5;
-    --text: #1c1915;
-    --muted: #645b50;
-    --accent: #1f4e8c;
-    --on-accent: #ffffff;
-    --shadow: 0 1px 2px rgba(40, 25, 10, 0.05), 0 24px 48px -24px rgba(60, 35, 15, 0.25);
+    --bg: #0f1013;
+    --surface: #15181e;
+    --surface-2: #1e2229;
+    --border: #2a2e37;
+    --text: #eef1f5;
+    --muted: #9ba3b0;
+    --accent: #5b8bd6;
+    --on-accent: #0b1220;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 24px 48px -24px rgba(0, 0, 0, 0.7);
 
     --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #0f1013;
-        --bg-image: url("waves.svg");
-        --surface: #15181e;
-        --surface-2: #1e2229;
-        --border: #2a2e37;
-        --text: #eef1f5;
-        --muted: #9ba3b0;
-        --accent: #5b8bd6;
-        --on-accent: #0b1220;
-        --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 24px 48px -24px rgba(0, 0, 0, 0.7);
-    }
-
-    body::before {
-        display: none;
-    }
 }
 
 *,
@@ -48,23 +26,12 @@ body {
     place-items: center;
     padding: 24px;
     background-color: var(--bg);
-    background-image: var(--bg-image);
+    background-image: url("waves.svg");
     background-position: center;
     background-size: cover;
     color: var(--text);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
-    background-size: 24px 24px;
-    -webkit-mask-image: radial-gradient(ellipse at center, #000 20%, transparent 75%);
-    mask-image: radial-gradient(ellipse at center, #000 20%, transparent 75%);
 }
 
 .card {
@@ -196,10 +163,6 @@ body::before {
         display: block;
         padding: 0;
         background: var(--surface);
-    }
-
-    body::before {
-        display: none;
     }
 
     .card {
