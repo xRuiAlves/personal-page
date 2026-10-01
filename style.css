@@ -178,6 +178,47 @@ body {
     color: var(--accent);
 }
 
+.theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: color-mix(in srgb, var(--surface-2) 85%, transparent);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text);
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+@media (hover: hover) {
+    .theme-toggle:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+}
+
+.theme-toggle .moon,
+:root[data-theme="light"] .theme-toggle .sun {
+    display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .moon {
+    display: block;
+}
+
 .facts a {
     color: inherit;
     text-decoration: none;

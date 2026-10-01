@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0f1013">
+    <script>
+        try {
+            if (localStorage.getItem("theme") === "light") {
+                document.documentElement.dataset.theme = "light";
+            }
+        } catch {}
+    </script>
     <meta name="description" content="Rui Alves, Staff Platform Engineer at Kevel in Porto, Portugal. Into software development, systems architecture, cloud computing and automation.">
     <meta name="author" content="Rui Alves">
     <link rel="canonical" href="https://ruialves.net/">
@@ -59,6 +67,10 @@
     </script>
 </head>
 <body>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme">
+        <svg class="icon sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        <svg class="icon moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    </button>
     <main class="card">
         <img class="photo" src="foto.jpg" alt="Portrait of Rui Alves" width="1600" height="1632" fetchpriority="high">
         <div class="content">
@@ -102,5 +114,29 @@
             </a>
         </nav>
     </main>
+    <script>
+        (() => {
+            const root = document.documentElement;
+            const button = document.querySelector(".theme-toggle");
+            const meta = document.querySelector('meta[name="theme-color"]');
+            const colors = { dark: "#0f1013", light: "#f3f5f8" };
+
+            function apply(theme) {
+                root.dataset.theme = theme;
+                meta.setAttribute("content", colors[theme]);
+                button.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} theme`);
+            }
+
+            apply(root.dataset.theme === "light" ? "light" : "dark");
+
+            button.addEventListener("click", () => {
+                const theme = root.dataset.theme === "light" ? "dark" : "light";
+                apply(theme);
+                try {
+                    localStorage.setItem("theme", theme);
+                } catch {}
+            });
+        })();
+    </script>
 </body>
 </html>
