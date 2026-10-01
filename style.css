@@ -19,11 +19,11 @@
     :root {
         --bg: #0f1013;
         --bg-image: url("waves.svg");
-        --surface: #1b1a18;
-        --surface-2: #242220;
-        --border: #312d29;
-        --text: #f3efe9;
-        --muted: #a8a095;
+        --surface: #111a2b;
+        --surface-2: #18233a;
+        --border: #22304a;
+        --text: #eef2f8;
+        --muted: #9aa7bd;
         --accent: #5b8bd6;
         --on-accent: #0b1220;
         --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 24px 48px -24px rgba(0, 0, 0, 0.7);
