@@ -167,3 +167,133 @@ body::before {
 .facts .icon {
     color: var(--accent);
 }
+
+@media (max-width: 720px) and (orientation: portrait) {
+    body {
+        padding: 16px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-height: calc(100vh - 32px);
+        max-height: calc(100dvh - 32px);
+        padding: 20px;
+        border-radius: 24px;
+    }
+
+    .photo {
+        flex: 0 1 320px;
+        min-height: 96px;
+        aspect-ratio: auto;
+        object-position: 30% 55%;
+    }
+
+    .content,
+    .links {
+        flex-shrink: 0;
+    }
+
+    .prompt {
+        margin-bottom: 8px;
+    }
+
+    .name {
+        font-size: 2.25rem;
+    }
+
+    .facts {
+        gap: 6px;
+        margin-top: 14px;
+        font-size: 1rem;
+    }
+
+    .bio {
+        margin-top: 14px;
+        font-size: 0.9375rem;
+        line-height: 1.55;
+    }
+
+    .links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .links a {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 720px) and (orientation: portrait) and (max-height: 560px) {
+    body {
+        padding: 12px;
+    }
+
+    .card {
+        gap: 14px;
+        max-height: calc(100vh - 24px);
+        max-height: calc(100dvh - 24px);
+        padding: 16px;
+    }
+
+    .photo {
+        min-height: 72px;
+    }
+
+    .prompt {
+        display: none;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .links a {
+        padding: 10px;
+    }
+}
+
+@media (max-height: 620px) and (orientation: landscape) {
+    body {
+        padding: 12px;
+    }
+
+    .card {
+        grid-template-columns: clamp(140px, 24vw, 240px) 1fr;
+        gap: 16px 28px;
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .photo {
+        aspect-ratio: auto;
+        height: 100%;
+        contain: size;
+    }
+
+    .prompt {
+        margin-bottom: 8px;
+    }
+
+    .name {
+        font-size: clamp(2rem, 5vw, 2.75rem);
+    }
+
+    .facts {
+        gap: 4px;
+        margin-top: 12px;
+        font-size: 0.9375rem;
+    }
+
+    .bio {
+        margin-top: 12px;
+        font-size: 0.9375rem;
+        line-height: 1.5;
+    }
+
+    .links a {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
