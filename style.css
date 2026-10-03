@@ -55,7 +55,7 @@ body {
 
 .card {
     width: 100%;
-    max-width: 880px;
+    max-width: 920px;
     display: grid;
     grid-template-columns: clamp(200px, 32vw, 300px) 1fr;
     grid-template-areas:
@@ -112,7 +112,7 @@ body {
 }
 
 .bio {
-    max-width: 46ch;
+    max-width: 50ch;
     margin: 24px 0 0;
     color: var(--muted);
     font-size: 1rem;
