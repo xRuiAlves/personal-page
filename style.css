@@ -123,7 +123,7 @@ body {
 .links {
     grid-area: links;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 12px;
 }
 
@@ -302,6 +302,10 @@ body {
 
     .links a {
         padding: 12px;
+    }
+
+    .links a:last-child:nth-child(odd) {
+        grid-column: span 2;
     }
 }
 
