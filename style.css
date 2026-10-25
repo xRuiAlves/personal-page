@@ -304,7 +304,8 @@ body {
         padding: 12px;
     }
 
-    .links a:last-child:nth-child(odd) {
+    /* With an odd number of links, the first one takes a full row */
+    .links a:first-child:nth-last-child(odd) {
         grid-column: span 2;
     }
 }
