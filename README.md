@@ -1,6 +1,6 @@
 # Personal Page
 
-Source of my personal page at [ruialves.net](https://ruialves.net). It is one static page with my contacts and links to my GitHub, LinkedIn, résumé and blog.
+Source of my personal page at [ruialves.net](https://ruialves.net). It is one static page with my contacts and links to my GitHub, LinkedIn, résumé, blog and music library.
 
 ## Development
 
